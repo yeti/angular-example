@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-------- CSS ---------->
+    <link rel="stylesheet" type="text/css" href="{% static "css/example.css" %}" />
     <!------- Angular ------->
     <script src="{% static "js/vendors/angular/angular.js" %}"></script>
     <script src="{% static "js/vendors/angular/angular-route.js" %}"></script>
@@ -14,10 +16,14 @@
     <script src="{% static "js/controllers/exampleController.js" %}"></script>
 </head>
 <body>
-    Outside of angular app
+    <div class="outsideAngular">
+        Outside of angular app
+    </div>
     <div ng-app="exampleApp">
-        Outside of current view
-        <div ng-view></div>
+        <div class="outsideView">
+            Outside of current view, but still inside of our Angular app
+        </div>
+        <div class="view" ng-view></div>
     </div>
 </body>
 </html>
