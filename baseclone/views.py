@@ -12,8 +12,8 @@ def index(request):
 def proxy_to(request, path, target_url):
     url = '%s%s' % (target_url, path)
     headers = {
-        'Authorization': 'Basic YourAuthorizationCodeHere',
-        'User-Agent': 'alex@yetihq.com',
+        'Authorization': 'Basic dG9uZy53aW5uaWVAZ21haWwuY29tOnRlc3RpbmdhY2NvdW50',
+        'User-Agent': 'tong.winnie@gmail.com',
         'Content-Type': 'application/json'
     }
     if request.method == 'GET':

@@ -1,0 +1,15 @@
+
+<h2>Calander Controller</h2>
+
+<div>
+    Name: <input ng-model="projectName">
+</div>
+<div>
+    Description: <input ng-model="projectDescription">
+</div>
+
+<button ng-click="newProject();">Add a new project!</button>
+
+<div ng-repeat="project in projects track by $index">
+    <div>{{ project.name }}</div>
+</div>

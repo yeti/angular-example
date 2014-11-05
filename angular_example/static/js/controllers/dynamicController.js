@@ -1,8 +1,12 @@
-function exampleController($scope, $http) {
+function dynamicController($scope, $http) {
+    $scope.firstName = "Rudy";
+    $scope.lastName = "Mutter";
+
     $scope.chuckNorrisMe = function(){
 
         $http({method: 'GET',
-            url: 'http://api.icndb.com/jokes/random?firstName=Chuck&lastName=Norris'}).
+            url: 'http://api.icndb.com/jokes/random?firstName=' + $scope.firstName
+                + '&lastName=' + $scope.lastName}).
             success(function(data, status, headers, config) {
                 // this callback will be called asynchronously
                 // when the response is available

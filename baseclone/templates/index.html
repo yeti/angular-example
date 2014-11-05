@@ -15,25 +15,34 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
     <!-- JavaScript -->
+    <script src="{% static "js/app.js" %}"></script>
 
     <!------- Controllers ------->
+    <script src="{% static "js/controllers/homeController.js" %}"></script>
+    <script src="{% static "js/controllers/calendarController.js" %}"></script>
+    <script src="{% static "js/controllers/projectController.js" %}"></script>
+
+    <!-- Factories -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static "css/index.css" %}">
 
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                This is outside of our Angular app. You could put a navbar here, for example.
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <header>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#/calendar">Calendar</a></li>
+            </ul>
+        </header>
         </div>
-        <div class="row">
+    </div>
+        <div class="row body-container" ng-app="baseclone">
             <div class="col-md-12">
-                <div>
-                    Make this div into an Angular app
-                </div>
+                <div class="view" ng-view></div>
             </div>
         </div>
         <div class="row">
