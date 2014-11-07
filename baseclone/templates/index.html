@@ -23,6 +23,7 @@
     <script src="{% static "js/controllers/projectController.js" %}"></script>
 
     <!-- Factories -->
+    <script src="{% static "js/factories/projectFactory.js" %}"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static "css/index.css" %}">
@@ -40,16 +41,18 @@
         </header>
         </div>
     </div>
-        <div class="row body-container" ng-app="baseclone">
-            <div class="col-md-12">
-                <div class="view" ng-view></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                This is also outside of our Angular app. You can put whatever you want here, or you can delete it.
-            </div>
+
+    <div class="row body-container" ng-app="baseclone">
+        <div class="col-md-12">
+            <div class="view" ng-view></div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            This is also outside of our Angular app. You can put whatever you want here, or you can delete it.
+        </div>
+    </div>
+
+</div>
 </body>
 </html>
